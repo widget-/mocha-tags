@@ -3,19 +3,20 @@
     "name": "Tabcorp Digital Team"
   },
   "dependencies": {
-    "lodash": "~2.4.1",
-    "minimist": "~1.1.0"
+    "lodash": "^4.17.15",
+    "minimist": "^1.2.0"
   },
   "deprecated": false,
   "description": "Add tags to your mocha test suite, and filter them at runtime",
   "devDependencies": {
-    "mocha": "~2.0.0",
-    "should": "~4.1.0",
-    "sinon": "~1.10.3"
+    "mocha": "^6.2.1",
+    "should": "^13.2.3",
+    "sinon": "^7.5.0"
   },
   "license": "MIT",
   "main": "src/index.js",
   "name": "mocha-tags",
+  "repository": "https://github.com/widget-/mocha-tags",
   "scripts": {
     "test": "mocha"
   },
