@@ -2,6 +2,9 @@
   "author": {
     "name": "Tabcorp Digital Team"
   },
+  "contributors": [
+    "Bryan Keller <b@bk.gg> (https://github.com/widget-)"
+  ],
   "dependencies": {
     "lodash": "^4.17.15",
     "minimist": "^1.2.0"
@@ -9,6 +12,7 @@
   "deprecated": false,
   "description": "Add tags to your mocha test suite, and filter them at runtime",
   "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^6.2.1",
     "should": "^13.2.3",
     "sinon": "^7.5.0"
