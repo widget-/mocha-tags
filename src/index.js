@@ -38,6 +38,7 @@ function proxy(filter, tagsToMatch) {
 tags.Filter = Filter;
 tags.filter = new Filter(argv.tags);
 tags.global  = global;
+tags.proxy = proxy;
 tags.hooks   = null;
 
 module.exports = tags;
