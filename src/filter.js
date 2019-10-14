@@ -3,6 +3,11 @@ module.exports = function Filter(string) {
   string = string || '';
   var parsed = compile(string);
 
+  /**
+   * Check if a filter matches all of the given tags.
+   * @param tags {String} Tags in the form of "is:myTag not:myOtherTag"
+   * @returns {boolean}
+   */
   function match(tags) {
     var include = (parsed.is.length === 0)  || matchFilter(tags, parsed.is);
     var exclude = (parsed.not.length !== 0) && matchFilter(tags, parsed.not);
