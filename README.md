@@ -118,7 +118,7 @@ console.log('Test filter: ', tags.filter);
 
 - `tags().describe` : normal usage
 - `tags().describe.only` : ignores any tags and filters, and runs by itself
-- `tags().xdescribe` : ignored regardless of tags
+- `tags().xdescribe` : ignored regardless of tags. Also can be used as `tags().describe.skip`.
 
 ...and the same pattern for `it`.
 You can also add custom test hooks by setting the following property:

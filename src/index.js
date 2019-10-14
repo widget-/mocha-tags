@@ -10,16 +10,18 @@ function tags() {
   // it & describe
   chain.it = either(tags.global.it, tags.global.xit);
   chain.it.only = tags.global.it.only;
+  chain.it.skip = tags.global.it.skip;
   chain.xit = tags.global.xit;
   chain.describe = either(tags.global.describe, tags.global.xdescribe);
   chain.describe.only = tags.global.describe.only;
+  chain.describe.skip = tags.global.describe.skip;
   chain.xdescribe = tags.global.xdescribe;
   // custom hooks
   if (typeof tags.hooks === 'function') {
     tags.hooks.call(chain, either);
   }
   return chain;
-};
+}
 
 /**
  * Generate a function which returns either a test or a skipped test
