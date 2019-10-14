@@ -6,7 +6,6 @@
     "Bryan Keller <b@bk.gg> (https://github.com/widget-)"
   ],
   "dependencies": {
-    "lodash": "^4.17.15",
     "minimist": "^1.2.0"
   },
   "deprecated": false,

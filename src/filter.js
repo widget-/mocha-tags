@@ -1,5 +1,3 @@
-var _ = require('lodash');
-
 module.exports = function Filter(string) {
 
   string = string || '';
@@ -49,8 +47,10 @@ function extract(string, regex) {
   return list;
 }
 
-function matchFilter(tags, list) {
-  return _.any(list, function(values) {
-    return _.difference(values, tags).length === 0;
-  });
+function matchFilter(tagList, toMatch) {
+  return (toMatch.filter(function (tags) {
+    return (tags.filter(function (tag) {
+      return tagList.includes(tag);
+    }).length > 0);
+  }).length > 0);
 }

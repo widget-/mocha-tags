@@ -1,7 +1,9 @@
-var _       = require('lodash');
 var argv    = require('minimist')(process.argv.slice(2));
 var Filter  = require('./filter');
 
+/**
+ * @param tags {String...} List of tags to match
+ */
 function tags() {
   var chain = {};
   var either = proxy(tags.filter, arguments);
@@ -19,12 +21,19 @@ function tags() {
   return chain;
 };
 
-function proxy(filter, tags) {
-  var run = filter.match(tags);
+/**
+ * Generate a function which returns either a test or a skipped test
+ * @param filter {Filter}
+ * @param tagsToMatch {String[]}
+ * @returns {function(T match, T skip): T}
+ * @template T
+ */
+function proxy(filter, tagsToMatch) {
+  var run = filter.match(Array.from(tagsToMatch));
   return function(match, skip) {
     return run ? match : skip;
   };
-};
+}
 
 tags.Filter = Filter;
 tags.filter = new Filter(argv.tags);
