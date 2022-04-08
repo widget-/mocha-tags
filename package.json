@@ -12,9 +12,9 @@
   "description": "Add tags to your mocha test suite, and filter them at runtime",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.1",
+    "mocha": "^9.2.2",
     "should": "^13.2.3",
-    "sinon": "^7.5.0"
+    "sinon": "^13.0.1"
   },
   "license": "MIT",
   "main": "src/index.js",
@@ -23,5 +23,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
